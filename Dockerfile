@@ -1,6 +1,6 @@
-FROM resin/rpi-raspbian:jessie
+FROM debian:jessie
 
-MAINTAINER jakobengdahl
+MAINTAINER gizmoh1683
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
     libasound2-data \
     wget
 
-RUN wget http://squeezelite-downloads.googlecode.com/git/squeezelite-armv6hf
+RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
 
-RUN chmod a+x squeezelite-armv6hf
+RUN chmod a+x squeezelite-x86-64
 
-CMD /squeezelite-armv6hf -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
+CMD /squeezelite-x86-64 -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
