@@ -13,13 +13,13 @@ RUN apt-get update && apt-get install -y \
     libasound2 \
     libasound2-data \
     wget \
-    git
+    git \
+    build-essential libmad0-dev libvorbis-dev libvo-aacenc-dev libfaad-dev libmpg123-dev
 
 RUN git clone https://github.com/ralph-irving/squeezelite.git
 RUN cd squeezelite
 # RUN ./configure
-RUN ./make
-RUN ./make install
+RUN make
 # RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
 
 # RUN chmod a+x squeezelite-x86-64
