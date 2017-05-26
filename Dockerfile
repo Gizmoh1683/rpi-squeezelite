@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/ralph-irving/squeezelite.git
 RUN cd squeezelite
-RUN ./configure
+# RUN ./configure
 RUN ./make
 RUN ./make install
 # RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
