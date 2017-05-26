@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     build-essential libmad0-dev libvorbis-dev libvo-aacenc-dev libfaad-dev libmpg123-dev
 
 RUN git clone https://github.com/ralph-irving/squeezelite.git
-RUN cd squeezelite
+WORKDIR squeezelite
 # RUN ./configure
 RUN make
 # RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
