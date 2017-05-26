@@ -24,4 +24,4 @@ RUN make
 
 RUN chmod a+x squeezelite
 
-CMD squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
+CMD /squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
