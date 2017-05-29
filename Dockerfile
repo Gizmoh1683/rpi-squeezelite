@@ -23,7 +23,7 @@ WORKDIR squeezelite
 RUN make
 #RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
 
-RUN mv squeezelite /opt/
+COPY squeezelite /opt/
 WORKDIR /opt
 RUN chmod a+x squeezelite
 
