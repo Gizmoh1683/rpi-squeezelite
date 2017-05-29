@@ -23,8 +23,8 @@ WORKDIR squeezelite
 RUN make
 #RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
 
-COPY squeezelite /opt/
+COPY squeezelite-x86_64 /opt/
 WORKDIR /opt
-RUN chmod a+x squeezelite
+RUN chmod a+x squeezelite-x86_64
 
-CMD /squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
+CMD /squeezelite-x86_64 -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
