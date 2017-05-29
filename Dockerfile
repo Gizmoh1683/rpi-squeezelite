@@ -16,14 +16,15 @@ RUN apt-get update && apt-get install -y \
     git \
     build-essential libmad0-dev libvorbis-dev libvo-aacenc-dev libfaad-dev libmpg123-dev
 
-#RUN git clone https://github.com/ralph-irving/squeezelite.git
-#WORKDIR squeezelite
+WORKDIR /opt
+RUN git clone https://github.com/ralph-irving/squeezelite.git
+WORKDIR squeezelite
 # RUN ./configure
-#RUN make
-# RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
-RUN wget https://downloads.sourceforge.net/project/lmsclients/squeezelite/linux/squeezelite-1.8.6-830-ubuntu-lts-x86_64.tar.gz
-RUN gunzip squeezelite-1.8.6-830-ubuntu-lts-x86_64.tar.gz
+RUN make
+#RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
 
+RUN mv squeezelite /opt/
+WORKDIR /opt
 RUN chmod a+x squeezelite
 
 CMD /squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
