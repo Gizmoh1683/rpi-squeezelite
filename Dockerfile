@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:9.6-slim
 
 MAINTAINER gizmoh1683
 
