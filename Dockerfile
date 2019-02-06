@@ -12,7 +12,7 @@ RUN apk update && apk add \
     alsa-lib-dev \
     wget \
     git \
-    g++ make libvorbis fdk-aac-dev mpg123-dev
+    g++ make libvorbis fdk-aac mpg123-dev
 
 #WORKDIR /opt
 RUN git clone https://github.com/ralph-irving/squeezelite.git
