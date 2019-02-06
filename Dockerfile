@@ -4,7 +4,7 @@ MAINTAINER gizmoh1683
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apk update && apk add -y \
+RUN apk update && apk add \
     usbutils \
     libflac-dev \
     libfaad2  \
