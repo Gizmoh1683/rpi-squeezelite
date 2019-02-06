@@ -1,4 +1,4 @@
-FROM debian:9.6-slim
+FROM alpine:3.7
 
 MAINTAINER gizmoh1683
 
@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
 #WORKDIR /opt
 RUN git clone https://github.com/ralph-irving/squeezelite.git
 WORKDIR squeezelite
-RUN ./configure
+# RUN ./configure
 RUN make
 # RUN wget https://github.com/Hypfer/squeezelite-downloads/raw/master/squeezelite-x86-64
 
