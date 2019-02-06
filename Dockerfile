@@ -6,15 +6,13 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apk update && apk add \
     usbutils \
-    libflac-dev \
-    libfaad2  \
-    libmad0 \
-    libasound2-dev \
-    libasound2 \
-    libasound2-data \
+    flac-dev \
+    faad2  \
+    libmad \
+    alsa-lib-dev \
     wget \
     git \
-    build-essential libmad0-dev libvorbis-dev libvo-aacenc-dev libfaad-dev libmpg123-dev
+    g++ make libvorbis fdk-aac-dev mpg123-dev
 
 #WORKDIR /opt
 RUN git clone https://github.com/ralph-irving/squeezelite.git
