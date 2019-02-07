@@ -24,7 +24,7 @@ RUN make
 
 #COPY squeezelite/squeezelite /opt/
 #WORKDIR /opt
-RUN ls -la
-RUN chmod a+x squeezelite-x86-64
+#RUN ls -la
+RUN chmod a+x squeezelite
 
 CMD /squeezelite-x86-64 -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
