@@ -3,6 +3,7 @@ FROM alpine:edge
 MAINTAINER gizmoh1683
 
 ENV DEBIAN_FRONTEND noninteractive
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN apk update && apk add \
     usbutils \
